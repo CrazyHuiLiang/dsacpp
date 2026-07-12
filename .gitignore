@@ -1,0 +1,95 @@
+# ============================================================
+# 邓俊辉《数据结构(C++语言版)》配套源码 — .gitignore
+# 适用 Visual Studio 2019 / C++ 桌面工程
+# ============================================================
+
+# ---------- Visual Studio 用户级 / IDE 缓存 ----------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.vshistory/
+
+# ---------- VS 数据库 / 浏览信息 ----------
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.bdb
+
+# ---------- 编译输出目录 ----------
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# ---------- 编译中间产物 / 链接产物 ----------
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.idb
+*.ilk
+*.exe
+*.dll
+*.lib
+*.exp
+*.map
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+*.log
+*.cache
+*.diagsession
+*.dmp
+
+# ---------- 临时 / 备份文件 ----------
+*~
+*.bak
+*.orig
+*.swp
+*.tmp
+*.~*
+
+# ---------- 预处理 / 模板实例化中间文件 ----------
+*.i
+*.ii
+*.ipp.cpp
+
+# ---------- 其他编辑器 / IDE ----------
+.vscode/
+.idea/
+*.code-workspace
+
+# ---------- 操作系统 ----------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# ---------- 备注 ----------
+# _input/ 与 _output/ 为测试数据 / 运行结果，按需保留，默认不忽略。
+# 如运行结果无需入库，可取消下面注释：
+# _output/
