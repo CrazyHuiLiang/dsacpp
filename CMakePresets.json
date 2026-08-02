@@ -1,0 +1,60 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "hidden": true,
+      "generator": "Visual Studio 18 2026",
+      "architecture": "Win32",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/_executable"
+      }
+    },
+    {
+      "name": "debug",
+      "inherits": "default",
+      "displayName": "Debug (Win32)",
+      "description": "Debug 配置 — 含 _DEBUG 宏、无优化"
+    },
+    {
+      "name": "release",
+      "inherits": "default",
+      "displayName": "Release (Win32)",
+      "description": "Release 配置 — 含 NDEBUG 宏、全优化"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug",
+      "displayName": "Build Debug",
+      "description": "编译全部 63 个项目 (Debug)"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "displayName": "Build Release",
+      "description": "编译全部 63 个项目 (Release)"
+    },
+    {
+      "name": "debug-vector",
+      "configurePreset": "debug",
+      "displayName": "Build vector (Debug)",
+      "description": "仅编译 vector 项目 (Debug)",
+      "targets": ["vector"]
+    },
+    {
+      "name": "release-vector",
+      "configurePreset": "release",
+      "displayName": "Build vector (Release)",
+      "description": "仅编译 vector 项目 (Release)",
+      "targets": ["vector"]
+    }
+  ]
+}
