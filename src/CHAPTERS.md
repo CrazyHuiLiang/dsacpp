@@ -1,8 +1,8 @@
 # 邓俊辉《数据结构（C++语言版）·第3版》章节—项目索引
 
-> 本文件按教材章节组织 `src/` 下的 63 个 Visual Studio 项目，每个项目链接到对应的 `.vcxproj`，可点击直接打开工程。
-> 打开方式：用 Visual Studio 2019 打开 [`dsacpp.sln`](./dsacpp.sln)，在解决方案资源管理器中右键某项目 →「设为启动项目」→ F5 调试；也可直接点击下表中的 `.vcxproj` 链接单独打开。
-> 说明：部分项目的「目录名」与「工程文件名」不一致（如 `PQ_ComplHeap/` 内为 `PQ_BinHeap.vcxproj`），下表链接均已指向实际文件。
+> 本文件按教材章节组织 `src/` 下的 63 个项目。项目构建系统已从 VS2019 `.vcxproj` 迁移至 CMake。
+> 打开方式：在仓库根目录执行 `cmake --preset debug` 生成 `build/dsacpp.sln`，用 Visual Studio 打开该 `.sln`；解决方案资源管理器中各目标已按章节归入 `ch01_Introduction` … `ch12_Sorting` 文件夹（见 `src/CMakeLists.txt` 末尾的 FOLDER 设置）。右键某目标 →「设为启动项目」→ F5 调试。
+> 下表「工程文件」列仍为迁移前的 `.vcxproj` 名称，仅作历史参考；现以 CMake target 名为准。部分「目录名」与「target 名 / 旧工程名」不一致，例如 `PQ_ComplHeap/`→target `PQ_BinHeap`、`nest_recursive/`→target `paren_recursive`、`countOnes/`→target `countones`、`fibonacci/`→target `Fibonacci`，详见 `src/CMakeLists.txt`。
 
 ---
 

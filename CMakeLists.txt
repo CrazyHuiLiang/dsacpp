@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 project(dsacpp LANGUAGES CXX)
 
+# 在 VS 等 IDE 中启用解决方案文件夹（配合各目标的 FOLDER 属性实现按章节分组显示）
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 # C++ 标准
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

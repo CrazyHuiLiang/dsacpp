@@ -1121,3 +1121,49 @@ target_compile_definitions(vector PRIVATE
 if(MSVC)
     target_compile_options(vector PRIVATE /EHsc /wd4996)
 endif()
+
+# ============================================================
+# Group targets into VS solution folders by textbook chapter (visual only,
+# does not change on-disk layout). Target names follow the actual
+# add_executable names in this file, which differ from dir/old-project names.
+# ============================================================
+set_property(TARGET countones sum factorial Fibonacci gcd power hanoi
+        greatest_slice majority median1 median2 shiftK maxRect prime lcs daxue simu
+    PROPERTY FOLDER "ch01_Introduction")
+
+set_property(TARGET vector bitmap bitmap.hopcroft Bitmap_set_only
+    PROPERTY FOLDER "ch02_Vector")
+
+set_property(TARGET list cursor_list
+    PROPERTY FOLDER "ch03_List")
+
+set_property(TARGET stack_vector stack_list queue conversion conversion_recursive
+        rpn paren_recursive paren_stack laby queen_brute_force_1 queen_brute_force_2
+        queen_recursive queen_stack
+    PROPERTY FOLDER "ch04_StackQueue")
+
+set_property(TARGET binTree
+    PROPERTY FOLDER "ch05_BinaryTree")
+
+set_property(TARGET graphMatrix
+    PROPERTY FOLDER "ch06_Graph")
+
+set_property(TARGET BST AVL Splay RedBlack
+    PROPERTY FOLDER "ch07_SearchTree")
+
+set_property(TARGET BTree
+    PROPERTY FOLDER "ch08_AdvancedSearchTree")
+
+set_property(TARGET hashtable skiplist
+    PROPERTY FOLDER "ch09_Dictionary")
+
+set_property(TARGET PQ_BinHeap PQ_leftHeap PQ_List SMMH huffman
+        Huffman_PQ_ComplHeap Huffman_PQ_LeftHeap Huffman_PQ_List
+    PROPERTY FOLDER "ch10_PriorityQueue")
+
+set_property(TARGET string_pm_bf1 string_pm_bf2 string_pm_kmp string_pm_kmp_improved
+        string_pm_bm_bc string_pm_bm_bc+gs string_pm_kr
+    PROPERTY FOLDER "ch11_String")
+
+set_property(TARGET bubblesort selection sorter
+    PROPERTY FOLDER "ch12_Sorting")
