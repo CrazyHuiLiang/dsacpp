@@ -1,0 +1,20 @@
+add_executable(huffman
+    ${DSACPP_COMMON_DIR}/UniPrint/print_HuffChar.cpp
+    ${DSACPP_COMMON_DIR}/UniPrint/print_basic.cpp
+    ${DSACPP_SOURCE_DIR}/ch01/prime/primeNLT.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/Huffman_PQ_Test.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/huffman_decode.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/huffman_encode.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/huffman_generateTable.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/huffman_generateTree.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/huffman_initForest.cpp
+    ${DSACPP_SOURCE_DIR}/ch10/huffman/huffman_statistics.cpp
+)
+dsacpp_configure_target(huffman)
+target_compile_definitions(huffman PRIVATE
+    $<$<CONFIG:Debug>:_DEBUG>
+    $<$<CONFIG:Release>:NDEBUG>
+    _CONSOLE
+    DSA_HUFFMAN
+    DSA_STACK_VECTOR
+)

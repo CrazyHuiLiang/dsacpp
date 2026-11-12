@@ -1,0 +1,19 @@
+add_executable(rpn
+    ${DSACPP_COMMON_DIR}/UniPrint/print_HuffChar.cpp
+    ${DSACPP_COMMON_DIR}/UniPrint/print_basic.cpp
+    ${DSACPP_SOURCE_DIR}/ch01/factorial/fac_iterative.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/append2RPN.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/calculation.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/displayProgress.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/main.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/priority.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/readNumber.cpp
+    ${DSACPP_SOURCE_DIR}/ch04/rpn/rpn.cpp
+)
+dsacpp_configure_target(rpn)
+target_compile_definitions(rpn PRIVATE
+    $<$<CONFIG:Debug>:_DEBUG>
+    $<$<CONFIG:Release>:NDEBUG>
+    _CONSOLE
+    DSA_STACK_LIST
+)
